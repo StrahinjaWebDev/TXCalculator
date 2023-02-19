@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arimo&family=Caveat&family=Fjalla+One&family=Kanit:wght@300&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+Wancho&family=Noto+Serif+TC:wght@200;300;400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arimo', sans-serif;
+}
+body,
+#root {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(34, 195, 74, 0.527) 0%, rgba(253, 187, 45, 0.623) 100%);
+
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.income-type {
+  background: radial-gradient(circle at 10% -20%, #4fcf20b7, #8bd00063, #b8d00056, #ddcc1575, #ffcc33b0);
+
+}
+
+button {
+  transition: 0.3s;
+}
+button:disabled {
+  color: lightslategray;
+}
+button:disabled:hover {
+  color: lightslategray;
+  background-color: white;
+}
+.dropdown-menu {
+  display:flex;
+  justify-content: center;
+  position:absolute;
+  flex-direction: column;
+  align-items: center;
+  top: 200%;
+  right: 50%;
+  transform:translate(50%);
+}
+.dropdown-menu-box {
+  background-color: rgba(255, 255, 255);
+  position: relative;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.dropdown-menu-box::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  right: 40%;
+  
+  height: 15px;
+  width: 15px;
+  background: white;
+  transform: rotate(45deg);
+}
+.table-wrapper {
+ overflow-x:scroll;
+ overflow: auto;
+}
+.tbl {
+  overflow-x:scroll;
+  overflow: auto;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media(min-width: 768px) {
+  input::placeholder {
+    font-size: 20px;
+  }
+}
